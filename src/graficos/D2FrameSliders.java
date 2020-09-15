@@ -83,7 +83,13 @@ class LaminaSlider extends JPanel{
 			//EventoSlider evento1 =new EventoSlider();
 			
 			//control.addChangeListener(evento1);
-		//VIDEO 97 - COMO PONER A LA ESCUCHA EL DESLIZANTE	
+			
+//----------------------------------------------------------------------------			
+			
+		//VIDEO 97 - COMO PONER A LA ESCUCHA EL DESLIZANTE
+			
+			
+			
 			control.addChangeListener(new EventoSlider());
 			
 			
