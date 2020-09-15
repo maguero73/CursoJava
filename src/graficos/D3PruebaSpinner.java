@@ -46,13 +46,13 @@ class MarcoSpinner extends JFrame{
 	
 	}
 }
-		
+//VIDEO 99 - Componentes Swing. JSpinner II. Vídeo 99	
 class LaminaSpinner extends JPanel{
 	
 		public LaminaSpinner(){
 			
 		//PASO 1
-	// VIDEO 99 - Componentes Swing. JSpinner II. Vídeo 99
+	
 	//COMENTAMOS LINEA DEL ARRAY Y UTILIZAMOS CONTRUCTOR NUMERMODEL	
 	//	String lista[]={"Enero","Febrero","Marzo","Abril","Mayo"}; 	
 			
