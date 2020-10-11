@@ -278,10 +278,12 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 			}
 			
 			miarea.setFont(new Font(tipo_texto, estilo_letra, tamagno_letra));
+			//Terminado Video 105
+			System.out.println("Tipo: " + tipo_texto + " Estilo: " + estilo_letra + " Tamaño: " + tamagno_letra);
 			
 //hoy domingo a la noche me quede en porque no me deja estilo normal Font.PLAIN, 
 //si yo le estoy poniendo el estilo en la clase que crea el menu
-//me quede en video 105 min 10.30
+//Video 105 Finalizado.
 			
 		}
 		
