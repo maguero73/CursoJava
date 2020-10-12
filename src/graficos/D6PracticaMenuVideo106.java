@@ -247,7 +247,7 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 				elem_menu.addActionListener(new StyledEditorKit.FontFamilyAction("cambia_letra", "Serif"));
 			}
 //VIDEO 108. 	Menús con CheckBox y RadioButton
-//comentamos las lineas siguientes de estilo:
+//comentamos las lineas siguientes de estilo que no hacen falta:
 			
 		}/*else if (menu=="Estilo"){
 			
