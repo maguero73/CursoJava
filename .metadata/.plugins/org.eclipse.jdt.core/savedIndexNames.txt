@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+/home/mariano/mvn_workspace/cursojava/CursoJava/.metadata/.plugins/org.eclipse.jdt.core
+1295800348.index
