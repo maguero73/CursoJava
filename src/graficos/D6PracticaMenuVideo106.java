@@ -70,7 +70,7 @@ class LaminaMenu3 extends JPanel{
 		
 		//configura_menu("Normal", "Estilo", "",Font.PLAIN,1);
 		
-//VIDEO 108 - Menús con CheckBox y RadioButton. Vídeo 108
+//VIDEO 108 - Menús con CheckBox y RadioButton.
 //COMENTAMOS ESTAS 2 LINEAS Y USAMOS NUEVA CLASE JCHECKBOXMENUITEM		
 		//configura_menu("Negrita", "Estilo", "",Font.BOLD,1,"/home/mariano/mvn_workspace/cursojava/src/graficos/cortar.gif");		
 		//configura_menu("Cursiva", "Estilo", "",Font.ITALIC,1,"/home/mariano/mvn_workspace/cursojava/src/graficos/cortar.gif");
@@ -84,13 +84,54 @@ cursiva.addActionListener(new StyledEditorKit.ItalicAction());
 estilo.add(negrita);
 estilo.add(cursiva);
 		//--------------------------------------------
+
+
+//VIDEO 108 - Menús con CheckBox y RadioButton.
+//Prescindimos de estas llamadas y las construimos para agregar los radioButtons		
 		
-		configura_menu("16", "Tamaño", "",9,16,"");
+	/*	configura_menu("16", "Tamaño", "",9,16,"");
 		configura_menu("18", "Tamaño", "",9,18,"");
 		configura_menu("20", "Tamaño", "",9,20,"");
-		configura_menu("22", "Tamaño", "",9,22,"");
+		configura_menu("22", "Tamaño", "",9,22,""); */
 		
+ButtonGroup tamagno_letra = new ButtonGroup();
 
+JRadioButtonMenuItem dieciseis = new JRadioButtonMenuItem("16");
+
+JRadioButtonMenuItem dieciocho = new JRadioButtonMenuItem("18");
+
+JRadioButtonMenuItem veinte = new JRadioButtonMenuItem("20");
+
+JRadioButtonMenuItem veintidos = new JRadioButtonMenuItem("22");
+
+//AGREGAR LAS INSTANCIAS AL GRUPO:
+
+tamagno_letra.add(dieciseis);
+
+tamagno_letra.add(dieciocho);
+
+tamagno_letra.add(veinte);
+
+tamagno_letra.add(veintidos);
+
+// PONER LOS ELEMENTOS A LA ESCUCHA:
+
+dieciseis.addActionListener(new StyledEditorKit.FontSizeAction("cambia_tamaño", 12));
+
+dieciocho.addActionListener(new StyledEditorKit.FontSizeAction("cambia_tamaño", 18));
+
+veinte.addActionListener(new StyledEditorKit.FontSizeAction("cambia_tamaño", 20));
+
+veintidos.addActionListener(new StyledEditorKit.FontSizeAction("cambia_tamaño", 22));
+
+// AGREGAR TODOS ESTOS ELEMENTOS AL MENU TAMAÑO:
+
+tamagno.add(dieciseis);
+tamagno.add(dieciocho);
+tamagno.add(veinte);
+tamagno.add(veintidos);
+
+//-------------------------------------------------------------
 		
 		
 		mibarra.add(fuente);
