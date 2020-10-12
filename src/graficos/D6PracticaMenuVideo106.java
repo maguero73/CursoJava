@@ -63,21 +63,32 @@ class LaminaMenu3 extends JPanel{
 		
 //Vídeo 103	- Creación de procesador de textos Práctica guiada III.
 		
-		configura_menu("Arial", "Fuente", "Arial",9,10);		
-		configura_menu("Courier", "Fuente", "Courier",9,10);
-		configura_menu("Serif", "Fuente", "Serif",9,10);
+		configura_menu("Arial", "Fuente", "Arial",9,10,"");		
+		configura_menu("Courier", "Fuente", "Courier",9,10,"");
+		configura_menu("Serif", "Fuente", "Serif",9,10,"");
 		//------------------------------------------
 		
 		//configura_menu("Normal", "Estilo", "",Font.PLAIN,1);
-		configura_menu("Negrita", "Estilo", "",Font.BOLD,1);		
-		configura_menu("Cursiva", "Estilo", "",Font.ITALIC,1);
 		
+//VIDEO 108 - Menús con CheckBox y RadioButton. Vídeo 108
+//COMENTAMOS ESTAS 2 LINEAS Y USAMOS NUEVA CLASE JCHECKBOXMENUITEM		
+		//configura_menu("Negrita", "Estilo", "",Font.BOLD,1,"/home/mariano/mvn_workspace/cursojava/src/graficos/cortar.gif");		
+		//configura_menu("Cursiva", "Estilo", "",Font.ITALIC,1,"/home/mariano/mvn_workspace/cursojava/src/graficos/cortar.gif");
+		
+JCheckBoxMenuItem negrita =new 	JCheckBoxMenuItem("Negrita", new ImageIcon ("/home/mariano/mvn_workspace/CursoJava/src/graficos/cortar.gif"));
+JCheckBoxMenuItem cursiva =new 	JCheckBoxMenuItem("Cursiva", new ImageIcon ("/home/mariano/mvn_workspace/CursoJava/src/graficos/cortar.gif"));
+
+negrita.addActionListener(new StyledEditorKit.BoldAction());
+cursiva.addActionListener(new StyledEditorKit.ItalicAction());
+
+estilo.add(negrita);
+estilo.add(cursiva);
 		//--------------------------------------------
 		
-		configura_menu("16", "Tamaño", "",9,16);
-		configura_menu("18", "Tamaño", "",9,18);
-		configura_menu("20", "Tamaño", "",9,20);
-		configura_menu("22", "Tamaño", "",9,22);
+		configura_menu("16", "Tamaño", "",9,16,"");
+		configura_menu("18", "Tamaño", "",9,18,"");
+		configura_menu("20", "Tamaño", "",9,20,"");
+		configura_menu("22", "Tamaño", "",9,22,"");
 		
 
 		
@@ -216,9 +227,9 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 				
 	}
 //Vídeo 103	- Creación de procesador de textos Práctica guiada III.
-	public void configura_menu (String rotulo, String menu, String tipo_letra, int estilos, int tam){
+	public void configura_menu (String rotulo, String menu, String tipo_letra, int estilos, int tam, String ruta_icono){
 		
-		JMenuItem elem_menu=new JMenuItem(rotulo);
+		JMenuItem elem_menu=new JMenuItem(rotulo, new ImageIcon(ruta_icono));
 		
 		if (menu=="Fuente"){
 			fuente.add(elem_menu);
@@ -235,9 +246,10 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 				
 				elem_menu.addActionListener(new StyledEditorKit.FontFamilyAction("cambia_letra", "Serif"));
 			}
+//VIDEO 108. 	Menús con CheckBox y RadioButton
+//comentamos las lineas siguientes de estilo:
 			
-			
-		}else if (menu=="Estilo"){
+		}/*else if (menu=="Estilo"){
 			
 			estilo.add(elem_menu);
 			
@@ -250,7 +262,7 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 				elem_menu.addActionListener(new StyledEditorKit.ItalicAction());	
 			}
 			
-		}else if (menu=="Tamaño"){
+		}*/else if (menu=="Tamaño"){
 			
 			tamagno.add(elem_menu);
 			
@@ -278,3 +290,4 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 	
 	Font letras;
 }
+

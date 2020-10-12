@@ -69,11 +69,11 @@ class LaminaMenu extends JPanel{
 		
 //-----------------------------------------------------------------------		
 //Menu Edicion		
-		JMenuItem cortar = new JMenuItem("Cortar");
+		JMenuItem cortar = new JMenuItem("Cortar", new ImageIcon("/home/mariano/mvn_workspace/CursoJava/src/graficos/cortar.gif"));
 		
-		JMenuItem copiar = new JMenuItem("Copiar");
+		JMenuItem copiar = new JMenuItem("Copiar", new ImageIcon("/home/mariano/mvn_workspace/CursoJava/src/graficos/copiar.gif"));
 		
-		JMenuItem pegar = new JMenuItem("Pegar");
+		JMenuItem pegar = new JMenuItem("Pegar", new ImageIcon("/home/mariano/mvn_workspace/CursoJava/src/graficos/pegar.gif")); 
 		
 //-----------------------------------------------------------------------		
 //Menu Herramientas		
