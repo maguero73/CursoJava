@@ -264,6 +264,15 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 				
 				tamagno_letra=letras.getSize();
 			}else if (menu=="Cursiva" || menu=="Negrita" || menu=="Normal"){
+				
+//VIDEO 106 Componentes Swing Creación de procesador de textos. Práctica guiada VI. 
+				
+				if(letras.getStyle()==1 || letras.getStyle()==2 ){
+					
+					estilo_letra = 3;
+				
+				}
+				
 				tipo_texto=letras.getFontName();
 				
 				tamagno_letra=letras.getSize();
