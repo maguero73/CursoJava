@@ -38,10 +38,10 @@ class LaminaEmergenteM extends JPanel{
 	
 	public LaminaEmergenteM() {
 		
-// UTLIZAMOS LA NUEVA CLASE QUE APRENDIMOS A USAR		
+// UTLIZAMOS LA NUEVA CLASE QUE APRENDIMOS A USAR LLAMADA JPOPUPMENU
 		
 		JPopupMenu emergente =new JPopupMenu();
-// PRESTAR ATENCION A QUE NECESITA MENU ITEM		
+// PRESTAR ATENCION A QUE NECESITA LOS MENU ITEM		
 		JMenuItem opcion1 =new 	JMenuItem("Opcion 1");
 		
 		JMenuItem opcion2 =new 	JMenuItem("Opcion 2");
@@ -57,12 +57,6 @@ class LaminaEmergenteM extends JPanel{
 		setComponentPopupMenu(emergente);
 		
 		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
+
