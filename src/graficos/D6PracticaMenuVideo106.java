@@ -72,9 +72,13 @@ class LaminaMenu3 extends JPanel{
 		
 //VIDEO 108 - Menús con CheckBox y RadioButton.
 //COMENTAMOS ESTAS 2 LINEAS Y USAMOS NUEVA CLASE JCHECKBOXMENUITEM		
-		//configura_menu("Negrita", "Estilo", "",Font.BOLD,1,"/home/mariano/mvn_workspace/cursojava/src/graficos/cortar.gif");		
-		//configura_menu("Cursiva", "Estilo", "",Font.ITALIC,1,"/home/mariano/mvn_workspace/cursojava/src/graficos/cortar.gif");
-		
+		configura_menu("Negrita", "Estilo", "",Font.BOLD,1,"/home/mariano/mvn_workspace/cursojava/src/graficos/cortar.gif");		
+		configura_menu("Cursiva", "Estilo", "",Font.ITALIC,1,"/home/mariano/mvn_workspace/cursojava/src/graficos/cortar.gif");
+
+//VIDEO 109 SEGUNDA PARTE COMENTAMOS ESTAS LINEAS PARA QUE NO MUESTRE MAS LOS		
+//JCHECKBOX EN LOS MENU DE NEGRITA CURSIVA
+
+/*
 JCheckBoxMenuItem negrita =new 	JCheckBoxMenuItem("Negrita", new ImageIcon ("/home/mariano/mvn_workspace/CursoJava/src/graficos/cortar.gif"));
 JCheckBoxMenuItem cursiva =new 	JCheckBoxMenuItem("Cursiva", new ImageIcon ("/home/mariano/mvn_workspace/CursoJava/src/graficos/cortar.gif"));
 
@@ -82,7 +86,7 @@ negrita.addActionListener(new StyledEditorKit.BoldAction());
 cursiva.addActionListener(new StyledEditorKit.ItalicAction());
 
 estilo.add(negrita);
-estilo.add(cursiva);
+estilo.add(cursiva); */
 		//--------------------------------------------
 
 
@@ -103,6 +107,10 @@ JRadioButtonMenuItem dieciocho = new JRadioButtonMenuItem("18");
 JRadioButtonMenuItem veinte = new JRadioButtonMenuItem("20");
 
 JRadioButtonMenuItem veintidos = new JRadioButtonMenuItem("22");
+
+//VIDEO 110 - Curso Java Componentes Swing. Atajos del teclado.
+
+veintidos.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, InputEvent.CTRL_DOWN_MASK));
 
 //AGREGAR LAS INSTANCIAS AL GRUPO:
 
@@ -150,6 +158,28 @@ tamagno.add(veintidos);
 		miarea =new JTextPane();
 		
 		add(miarea, BorderLayout.CENTER);
+
+//VIDEO 109 - SEGUNDA PARTE - PEGAMOS CODIGO DEL PROCESADOR DE TEXTO:
+
+		JPopupMenu emergente =new JPopupMenu();
+		// PRESTAR ATENCION A QUE NECESITA LOS MENU ITEM		
+				JMenuItem negritaE =new 	JMenuItem("Negrita");
+				
+				JMenuItem cursivaE =new 	JMenuItem("Cursiva");
+
+				negritaE.addActionListener(new StyledEditorKit.BoldAction());
+
+				cursivaE.addActionListener(new StyledEditorKit.ItalicAction());
+				
+				emergente.add(negritaE);
+				
+				emergente.add(cursivaE);
+				
+				miarea.setComponentPopupMenu(emergente);
+
+
+
+	}	
 
 //Vídeo 103 - Creación de procesador de textos Práctica guiada III.
 //comentamos las siguientes lineas:	borramos o comentamos todos los JMenuItem
@@ -266,7 +296,7 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 				
 	*/			
 				
-	}
+	
 //Vídeo 103	- Creación de procesador de textos Práctica guiada III.
 	public void configura_menu (String rotulo, String menu, String tipo_letra, int estilos, int tam, String ruta_icono){
 		
@@ -290,20 +320,28 @@ courier.addActionListener(new ActionListener(){public void actionPerformed(Actio
 //VIDEO 108. 	Menús con CheckBox y RadioButton
 //comentamos las lineas siguientes de estilo que no hacen falta:
 			
-		}/*else if (menu=="Estilo"){
+		}else if (menu=="Estilo"){
 			
 			estilo.add(elem_menu);
 			
 			if(estilos==Font.BOLD){
+
+				// VIDEO 110 DONDE APRENDEMOS LA CLASE SETACCELERATOR
+
+				elem_menu.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_DOWN_MASK));
 			
 				elem_menu.addActionListener(new StyledEditorKit.BoldAction());
 			
 			}else if (estilos==Font.ITALIC){
+
+				// VIDEO 110 DONDE APRENDEMOS LA CLASE SETACCELERATOR
+
+				elem_menu.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_K, InputEvent.CTRL_DOWN_MASK));
 			
 				elem_menu.addActionListener(new StyledEditorKit.ItalicAction());	
 			}
 			
-		}*/else if (menu=="Tamaño"){
+		}else if (menu=="Tamaño"){
 			
 			tamagno.add(elem_menu);
 			

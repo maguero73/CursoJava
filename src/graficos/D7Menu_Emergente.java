@@ -1,5 +1,7 @@
 package graficos;
 
+import java.awt.BorderLayout;
+
 import javax.swing.*;
 
 
@@ -37,6 +39,34 @@ class MarcoEmergenteM extends JFrame{
 class LaminaEmergenteM extends JPanel{
 	
 	public LaminaEmergenteM() {
+
+		setLayout(new BorderLayout());
+
+		JPanel laminamenu=new JPanel();
+
+		JMenuBar mibarra=new JMenuBar();
+
+		JMenu fuente=new JMenu("Fuente");
+		
+		JMenu estilo=new JMenu("Estilo");
+		
+		JMenu tamagno=new JMenu("Tamaño");
+
+		mibarra.add(fuente);
+
+		mibarra.add(estilo);
+
+		mibarra.add(tamagno);
+
+		laminamenu.add(mibarra);
+
+		add(laminamenu, BorderLayout.NORTH);
+
+		JTextPane miarea =new JTextPane();
+
+		add(miarea, BorderLayout.CENTER);
+
+//-------------------------------------------------------------------------		
 		
 // UTLIZAMOS LA NUEVA CLASE QUE APRENDIMOS A USAR LLAMADA JPOPUPMENU
 		
@@ -54,7 +84,7 @@ class LaminaEmergenteM extends JPanel{
 		
 		emergente.add(opcion3);
 		
-		setComponentPopupMenu(emergente);
+		miarea.setComponentPopupMenu(emergente);
 		
 		
 	}
