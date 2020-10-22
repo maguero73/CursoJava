@@ -40,6 +40,23 @@ class Marco_Barra extends JFrame{
 		Action accionAmarillo=new AccionColor("Amarillo", new ImageIcon("src/graficos/bola_amarilla.gif"), Color.YELLOW);
 		
 		Action accionRojo=new AccionColor("Rojo", new ImageIcon("src/graficos/bola_roja.gif"), Color.RED);
+
+	//VIDEO 111 - CREAMOS UN BOTON CON ACCION SALIR
+		
+	Action accionSalir =new AbstractAction("Salir", new ImageIcon ("src/graficos/salir.gif")){
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			System.exit(0);
+		}
+
+		
+
+	};
+
+
+
 		
         JMenu menu =new JMenu("Color");
         
@@ -53,9 +70,22 @@ class Marco_Barra extends JFrame{
         
         setJMenuBar(barramenu);
 
-        //VIDEO 111 - CONSTRUCCION DE LA BARRA DE HERRAMIENTAS
+        //CONSTRUCCION DE LA BARRA DE HERRAMIENTAS
 
-        
+		JToolBar barra =new JToolBar();
+		
+		barra.add(accionAzul);
+		barra.add(accionAmarillo);
+		barra.add(accionRojo);
+		//AGREGAMOS UN SEPARADOR
+		barra.addSeparator();
+		//AGREGAMOS EL BOTON A LA LAMINA
+		barra.add(accionSalir);
+
+		add(barra, BorderLayout.NORTH);
+
+
+
 		
 	}
 		
