@@ -2,6 +2,7 @@ package practicas;
 
 import javax.swing.JFrame;
 
+//Curso Java. Ejercicio Práctico II. Vídeo 123 / 124
 public class Aplicacion_Diag {
 
 	public static void main(String[] args) {
